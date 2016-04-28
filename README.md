@@ -1,2 +1,9 @@
 # sudo-openldap
-config sudo for ldap server
+
+Config sudo for ldap server
+
+Copy sudo.ldif and sudo.schema to ldap server => path /etc/openldap/shcema
+
+In terminal
+$ ldapadd -Y EXTERNAL -H ldapi:/// -f sudo.ldif
+$ service slapd restart
